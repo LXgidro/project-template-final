@@ -1,0 +1,30 @@
+### Базовые настройки
+@baseUrl = http://localhost:3001
+@contentType = application/json
+
+### 1. РЕГИСТРАЦИЯ пользователя
+# @name register
+POST {{baseUrl}}/register
+Content-Type: {{contentType}}
+
+{
+  "login": "test@e.com",
+  "password": "test123"
+}
+
+
+### 2. ВХОД (если пользователь уже зарегистрирован)
+# @name login
+POST {{baseUrl}}/login
+Content-Type: {{contentType}}
+
+{
+  "login": "test@e.com",
+  "password": "test123"
+}
+
+
+### 3. ВЫХОД
+POST {{baseUrl}}/logout
+Content-Type: {{contentType}}
+
